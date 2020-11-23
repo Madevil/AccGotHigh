@@ -11,15 +11,28 @@ using HarmonyLib;
 
 using KKAPI.Maker;
 using KKAPI.Maker.UI.Sidebar;
-
+#if AI || HS2
+using AIChara;
+#endif
 namespace AccGotHigh
 {
 	[BepInPlugin(GUID, Name, Version)]
+	[BepInDependency("marco.kkapi")]
+	[BepInProcess(Constants.MainGameProcessName)]
+#if KK
+	[BepInProcess(Constants.MainGameProcessNameSteam)]
+#endif
 	public partial class AccGotHigh : BaseUnityPlugin
 	{
 		public const string Name = "AccGotHigh";
+#if AI
+		public const string GUID = "madevil.ai.AccGotHigh";
+#elif HS2
+		public const string GUID = "madevil.hs2.AccGotHigh";
+#else
 		public const string GUID = "madevil.kk.AccGotHigh";
-		public const string Version = "1.1.0.0";
+#endif
+		public const string Version = "1.2.0.0";
 
 		internal static new ManualLogSource Logger;
 		internal static MonoBehaviour Instance;
@@ -104,7 +117,7 @@ namespace AccGotHigh
 			for (int i = 0; i < groupie.Count; i++)
 			{
 				if (groupie[i].name.StartsWith("AccGotHigh_")) continue;
-				if (GameObject.Find("AccGotHigh_" + groupie[i].gameObject.name) != null) continue;
+				if (GameObject.Find("AccGotHigh_" + groupie[i].name) != null) continue;
 
 				Transform origin = groupie[i].transform;
 				Transform copy = Instantiate(origin, origin.parent, false);
@@ -124,8 +137,11 @@ namespace AccGotHigh
 		internal static void CtrlEffect(int slot, bool show)
 		{
 			if (slot < 0) return;
-
+#if KK
 			ChaAccessoryComponent chaAccessory = chaCtrl.GetAccessory(slot);
+#else
+			CmpAccessory chaAccessory = chaCtrl.GetAccessory(slot);
+#endif
 			if (chaAccessory == null) return;
 
 			if (show)

@@ -1,0 +1,59 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30709.132
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AI_AccGotHigh", "src\AccGotHigh.AI\AI_AccGotHigh.csproj", "{B3730422-288C-47C4-ADA3-0DC609388DF5}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "AccGotHigh.Core", "src\AccGotHigh.Core\AccGotHigh.Core.shproj", "{5A8FDB27-FFCA-4A77-AB0F-AFDEF9A034ED}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Shared", "src\Shared\Shared.shproj", "{841FFFF7-1940-4B7B-B21F-83E2F16333D4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KK_AccGotHigh", "src\AccGotHigh.KK\KK_AccGotHigh.csproj", "{14A624E4-E552-436A-BB45-AF25B0F29505}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HS2_AccGotHigh", "src\AccGotHigh.HS2\HS2_AccGotHigh.csproj", "{3BDACFA1-CBB3-41C5-A578-805F8D634250}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AccGotHigh", "AccGotHigh", "{5DC5506D-274B-46B5-BA27-24ADF9EC21BE}"
+EndProject
+Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		src\AccGotHigh.Core\AccGotHigh.Core.projitems*{14a624e4-e552-436a-bb45-af25b0f29505}*SharedItemsImports = 4
+		src\Shared\Shared.projitems*{14a624e4-e552-436a-bb45-af25b0f29505}*SharedItemsImports = 4
+		src\AccGotHigh.Core\AccGotHigh.Core.projitems*{3bdacfa1-cbb3-41c5-a578-805f8d634250}*SharedItemsImports = 4
+		src\Shared\Shared.projitems*{3bdacfa1-cbb3-41c5-a578-805f8d634250}*SharedItemsImports = 4
+		src\AccGotHigh.Core\AccGotHigh.Core.projitems*{5a8fdb27-ffca-4a77-ab0f-afdef9a034ed}*SharedItemsImports = 13
+		src\Shared\Shared.projitems*{841ffff7-1940-4b7b-b21f-83e2f16333d4}*SharedItemsImports = 13
+		src\AccGotHigh.Core\AccGotHigh.Core.projitems*{b3730422-288c-47c4-ada3-0dc609388df5}*SharedItemsImports = 4
+		src\Shared\Shared.projitems*{b3730422-288c-47c4-ada3-0dc609388df5}*SharedItemsImports = 4
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B3730422-288C-47C4-ADA3-0DC609388DF5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3730422-288C-47C4-ADA3-0DC609388DF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3730422-288C-47C4-ADA3-0DC609388DF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3730422-288C-47C4-ADA3-0DC609388DF5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14A624E4-E552-436A-BB45-AF25B0F29505}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14A624E4-E552-436A-BB45-AF25B0F29505}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14A624E4-E552-436A-BB45-AF25B0F29505}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14A624E4-E552-436A-BB45-AF25B0F29505}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3BDACFA1-CBB3-41C5-A578-805F8D634250}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3BDACFA1-CBB3-41C5-A578-805F8D634250}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3BDACFA1-CBB3-41C5-A578-805F8D634250}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3BDACFA1-CBB3-41C5-A578-805F8D634250}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B3730422-288C-47C4-ADA3-0DC609388DF5} = {5DC5506D-274B-46B5-BA27-24ADF9EC21BE}
+		{5A8FDB27-FFCA-4A77-AB0F-AFDEF9A034ED} = {5DC5506D-274B-46B5-BA27-24ADF9EC21BE}
+		{14A624E4-E552-436A-BB45-AF25B0F29505} = {5DC5506D-274B-46B5-BA27-24ADF9EC21BE}
+		{3BDACFA1-CBB3-41C5-A578-805F8D634250} = {5DC5506D-274B-46B5-BA27-24ADF9EC21BE}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {122209C7-BF7E-401B-BD21-9FE5B6453A16}
+	EndGlobalSection
+EndGlobal
