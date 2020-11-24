@@ -1,4 +1,5 @@
-﻿using UnityEngine.EventSystems;
+﻿using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 using HarmonyLib;
@@ -23,7 +24,16 @@ namespace AccGotHigh
 #if KK
 					int slot = int.Parse(eventData.pointerEnter.transform.parent.name.Replace("tglSlot", "")) - 1;
 #else
-					int slot = int.Parse(eventData.pointerEnter.name.Replace("Slot", "")) - 1;
+					int slot = -1;
+					Transform self = eventData.pointerEnter.transform;
+					Transform parent = self.parent;
+					for (int i = 0; i < parent.childCount - 1; i++)
+					{
+						if (parent.GetChild(i) == self)
+							slot = i;
+					}
+					if (slot == -1)
+						return;
 #endif
 					if (current == slot)
 						return;

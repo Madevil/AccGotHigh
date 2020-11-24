@@ -32,7 +32,7 @@ namespace AccGotHigh
 #else
 		public const string GUID = "madevil.kk.AccGotHigh";
 #endif
-		public const string Version = "1.2.0.0";
+		public const string Version = "1.3.0.0";
 
 		internal static new ManualLogSource Logger;
 		internal static MonoBehaviour Instance;
