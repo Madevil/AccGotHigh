@@ -1,8 +1,13 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using System.Linq;
+
+using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 using HarmonyLib;
+
+using KK_Plugins.MaterialEditor;
 
 namespace AccGotHigh
 {
@@ -51,6 +56,22 @@ namespace AccGotHigh
 					return;
 				CtrlEffect(current, false);
 				current = -1;
+			}
+
+			[HarmonyPrefix, HarmonyPatch(typeof(MaterialAPI), nameof(MaterialAPI.GetRendererList))]
+			private static bool MaterialAPI_GetRendererList(ref List<Renderer> __result, GameObject gameObject)
+			{
+				if (gameObject == null)
+					return true;
+
+				List<Renderer> rendList = gameObject.GetComponentsInChildren<Renderer>(true).ToList();
+
+				if (!rendList.Any(x => x.name.StartsWith("AccGotHigh_")))
+					return true;
+
+				rendList.RemoveAll(x => x.name.StartsWith("AccGotHigh_"));
+				__result = rendList;
+				return false;
 			}
 		}
 	}

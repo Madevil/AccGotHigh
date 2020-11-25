@@ -76,6 +76,10 @@
       <HintPath>..\..\packages\IllusionLibs.AIGirl.UnityEngine.UIModule.2018.2.21\lib\net46\UnityEngine.UIModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="MaterialEditor">
+      <HintPath>..\..\lib\HS2_MaterialEditor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

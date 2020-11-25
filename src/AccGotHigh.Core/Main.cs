@@ -18,6 +18,7 @@ namespace AccGotHigh
 {
 	[BepInPlugin(GUID, Name, Version)]
 	[BepInDependency("marco.kkapi")]
+	[BepInDependency("com.deathweasel.bepinex.materialeditor")]
 	[BepInProcess(Constants.MainGameProcessName)]
 #if KK
 	[BepInProcess(Constants.MainGameProcessNameSteam)]
@@ -32,7 +33,7 @@ namespace AccGotHigh
 #else
 		public const string GUID = "madevil.kk.AccGotHigh";
 #endif
-		public const string Version = "1.3.0.0";
+		public const string Version = "1.3.1.0";
 
 		internal static new ManualLogSource Logger;
 		internal static MonoBehaviour Instance;
