@@ -10,5 +10,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)Shared.Constants.cs" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\bonelyfans.shader" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\bonelyfans.unity3d" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\glitch.unity3d" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\numbers.unity3d" />
   </ItemGroup>
 </Project>
